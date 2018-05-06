@@ -19,24 +19,24 @@ public class GameView {
     }
 
     public void showGuessResult(GuessResult guessResult) {
-        System.out.println("Guess Result: " + guessResult.getResult());
+        System.out.print("Guess Result: " + guessResult.getResult()+"\n");
     }
 
     public void showGameStatus(String status) {
-        System.out.println("Game Status: " + status);
+        System.out.print("Game Status: " + status+"\n");
     }
 
     public void showGuessHistory(List<GuessResult> guessResults) {
-        System.out.println("Guess History:");
+        System.out.print("Guess History:\n");
         guessResults.stream().forEach(guessResult -> {
-            System.out.println(String.format("[Guess Numbers: %1$s, Guess Result: %2$s]",
+            System.out.print(String.format("[Guess Numbers: %1$s, Guess Result: %2$s]",
                     guessResult.getInputAnswer().toString(),
-                    guessResult.getResult()));
+                    guessResult.getResult())+"\n");
         });
     }
 
     public void showBegin() throws IOException {
-        System.out.println("------Guess Number Game, You have 6 chances to guess!  ------");
+        System.out.print("------Guess Number Game, You have 6 chances to guess!  ------\n");
 
     }
 }
